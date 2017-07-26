@@ -114,7 +114,7 @@ class NumpyMLP():
                W_next = self.params[2*(n+1)]
 
            ###########################
-           # Solution to Exercise 6.2 
+           # Solution to Exercise 5.1 
             
            # If it is the last layer, compute the average cost gradient
            # Otherwise, propagate the error backwards from the next layer
@@ -142,7 +142,7 @@ class NumpyMLP():
            # Bias gradient
            nabla_b = np.sum(e, 1, keepdims=True)
 
-           # End of solution to Exercise 6.2 
+           # End of solution to Exercise 5.1 
            ###########################
 
            # Store the gradients 
@@ -323,7 +323,7 @@ class TheanoMLP(NumpyMLP):
         tilde_z = x
 
         ###########################
-        # Solution to Exercise 6.4 
+        # Solution to Exercise 5.3 
         for n in range(self.n_layers):
 
             # Get weigths and bias (always in even and odd positions)
@@ -348,7 +348,7 @@ class TheanoMLP(NumpyMLP):
 
             if allOuts:
                 activations.append(tilde_z)
-        # End of solution to Exercise 6.4 
+        # End of solution to Exercise 5.3 
         ###########################
 
 
